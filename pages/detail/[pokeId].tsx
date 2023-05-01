@@ -59,10 +59,10 @@ export function PokeImage({...Attr}){
     )
 }
 
-export function Moves({children}){
+export function Moves({children}:any){
     return (
         <div className={styles.nameContainer}>
-            {children && children.map(move => <Move move={move.move.name} />)}    
+            {children && children.map((move:any) => <Move move={move.move.name} />)}    
         </div>
     )
 }

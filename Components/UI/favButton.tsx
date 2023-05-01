@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from "./favButton.module.css"
 
-export default function FavButton({media, pokeId}) : JSX.Element{
+export default function FavButton({media, pokeId}:any) : JSX.Element{
     let [mediaTemp, setSavedTemp] = useState(media);
     let [isLiked, setIsLiked] = useState(true);
     useEffect(() => {
         if(mediaTemp){
-            let findItem = mediaTemp.findIndex(item => item === pokeId);
+            let findItem = mediaTemp.findIndex((item:any) => item === pokeId);
             setIsLiked(!(findItem === -1));
         }else{
             setIsLiked(false);
@@ -23,7 +23,7 @@ export default function FavButton({media, pokeId}) : JSX.Element{
 
     
     const handleDelete = () => {
-        const newItems = mediaTemp.filter((allFavPoke) => allFavPoke !== pokeId);
+        const newItems = mediaTemp.filter((allFavPoke:any) => allFavPoke !== pokeId);
         setSavedTemp(newItems);
     };
 

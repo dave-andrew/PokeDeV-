@@ -1,6 +1,6 @@
 
 
-export default function Move({move}){
+export default function Move({move}:any){
     return (
         <div style={{
             display: "flex",

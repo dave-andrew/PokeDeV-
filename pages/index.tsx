@@ -33,7 +33,7 @@ export default function Home() : JSX.Element {
     return (
         <div className={styles.grid} style={{color: theme.color}}>
             {
-                data.pokemons.results.map((media, index) => {
+                data.pokemons.results.map((media:any, index:any) => {
                     return (
                         <div key={media.name}>
                             <Link href={`/detail/${media.name}`} className={styles.link}>

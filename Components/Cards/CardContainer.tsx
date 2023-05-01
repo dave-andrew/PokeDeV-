@@ -2,7 +2,7 @@ import { ThemeContext } from "../context/ThemeContext";
 import styles from "./CardContainer.module.css"
 import { useContext } from "react"
 
-export function CardContainer({media}){
+export function CardContainer({media}:any){
 
     let theme = useContext(ThemeContext);
 
@@ -26,7 +26,7 @@ export function Image({...Attr}){
     )
 }
 
-export function Name({children}){
+export function Name({children}:any){
     let theme = useContext(ThemeContext);
     return (
         <div className={styles.title} style={{color: theme.color}}>{children}</div>

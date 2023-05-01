@@ -7,9 +7,7 @@ import { domainToASCII, fileURLToPath } from "url";
 import styles from "./favorite.module.css"
 import style from "./index.module.css"
 import Link from "next/link";
-import { useRouter } from "next/router";
 import Spinner from "../Components/UI/spinner";
-import Skeleton from "react-loading-skeleton";
 import { ThemeContext } from "../Components/context/ThemeContext";
 import { useContext } from "react"
 
@@ -32,14 +30,14 @@ export default function Favorite() : JSX.Element{
 
     let desiredSort = (sort) ? savedPoke.sort() : savedPoke.sort().reverse();
 
-    let pokeQuery = desiredSort.map((name) => ({
+    let pokeQuery = desiredSort.map((name:any) => ({
         query: GET_POKEMON_BY_NAME,
         variables: {
             name: name
         }
     }))
 
-    const results = pokeQuery.map((query) => useQuery(query.query,
+    const results = pokeQuery.map((query:any) => useQuery(query.query,
         {
             variables: query.variables 
         }
@@ -47,11 +45,11 @@ export default function Favorite() : JSX.Element{
 
     const [searchFav, setSearchFav] = useState('')
 
-    let handleChange = (e) => {
+    let handleChange = (e:any) => {
         setSearchFav(e.target.value);
     }
 
-    const filterResult = results.filter(({ data }) =>
+    const filterResult = results.filter(({ data }:any) =>
         data && data.pokemon.name.includes(searchFav.toLowerCase())
     );
 
@@ -72,7 +70,7 @@ export default function Favorite() : JSX.Element{
             <div className={style.grid}>
 
                 {
-                    display.map(({loading, error, data}, index) => {
+                    display.map(({loading, error, data}:any) => {
                         if(loading) return (
                                 <div>
                                     <Spinner />

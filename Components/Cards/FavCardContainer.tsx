@@ -2,7 +2,7 @@ import { ThemeContext } from "../context/ThemeContext"
 import { useContext } from "react"
 
 
-export default function FavCardContainer({media}){
+export default function FavCardContainer({media}:any){
 
     return (
         <div>
@@ -25,7 +25,7 @@ export function Image({...Attr}){
     )
 }
 
-export function Name({children}){
+export function Name({children}:any){
     let theme = useContext(ThemeContext);
     return (
         <div style={{

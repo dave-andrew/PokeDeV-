@@ -1,7 +1,7 @@
 import Link from "next/link"
 import styles from "./SearchedCard.module.css"
 
-export default function SearchedCard({media}) : JSX.Element{
+export default function SearchedCard({media}:any) : JSX.Element{
 
     // console.log(media)
 
@@ -29,7 +29,7 @@ export function Image({...Attr}){
     )
 }
 
-export function Name({children}){
+export function Name({children}:any){
     return (
         <div className={styles.name}>
             {children}
