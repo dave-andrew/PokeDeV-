@@ -1,0 +1,37 @@
+.topnav_container {
+    width: 100%;
+    position: fixed;
+    display: block;
+    left: 0;
+    z-index: 1;
+    background-color: #3B4CCA;
+    box-shadow: -2px -2px 26px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px -2px 26px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -2px 26px -4px rgba(0,0,0,0.75);
+}
+
+.img {
+    position: relative;
+    width: 20vw;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@media only screen and (max-width: 600px){
+    .img {
+        width: 60vw;
+    }
+}
+
+.btn {
+    width: 3.5rem;
+    height: auto;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1vw;
+    cursor: pointer;
+}
