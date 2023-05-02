@@ -10,7 +10,7 @@ export default function TopNav(){
             {router.pathname !== '/' && (
                 <button onClick={() => router.back()} className={styles.btn}><img src="/left-arrow.png" alt=""/></button>
             )}
-            <img src="/title.png" alt="" className={styles.img} />
+            <img src="/Title.png" alt="" className={styles.img} />
         </div>
     )
 
